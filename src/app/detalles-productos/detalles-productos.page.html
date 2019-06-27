@@ -1,0 +1,47 @@
+<ion-header class="navbar-edit">
+  <ion-toolbar>    
+    <ion-buttons slot="start">
+      <ion-back-button text="" icon="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalles del producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="detalles">
+    <ion-slides class="slide" pager="true" [options]="slideProducts">
+      <ion-slide>
+        <img src="https://us.emedemujer.com/wp-content/uploads/sites/3/2017/07/plato-de-comida.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://i.ytimg.com/vi/pcHmJUkYdxQ/maxresdefault.jpg" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="https://i.ytimg.com/vi/BrA6BZBGmIE/maxresdefault.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+    <div class="box-description">
+      <div class="form-group">
+        <h5>Nombre</h5>
+        <p>Pabellon criollo Venezolano</p>
+      </div>
+      <div class="form-group">
+        <h5>Descripción</h5>
+        <p>El pabellón criollo es un plato tradicional de Venezuela reconocido como el plato nacional por excelencia que forma parte de la gastronomía venezolana.​ El pabellón criollo tradicional está compuesto por arroz blanco cocido, carne mechada, caraotas negras "refritas" y tajadas de plátano maduro frito.​</p>
+      </div>
+      <div class="form-group w-50">
+        <h5>Porción</h5>
+        <p>2</p>
+      </div>
+      <div class="form-group w-50">
+        <h5>Peso</h5>
+        <p>500gm</p>
+      </div>
+      <div class="form-group">
+        <h5>Precio del plato</h5>
+        <p class="green">10 USD</p>
+      </div>
+      <div class="form-group">
+        <button class="btn-buy">Comprar</button>
+      </div>
+    </div>
+</ion-content>
