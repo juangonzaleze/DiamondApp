@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController,ModalController, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-detalles-productos',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetallesProductosPage implements OnInit {
 
-  constructor() { }
+  constructor(private nav:NavController,private modalCtrl:ModalController, public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,33 @@ export class DetallesProductosPage implements OnInit {
     speed: 400,
     slidesPerView: 1,
   };
+  
+  closeModal()
+  {
+    this.modalCtrl.dismiss();
+  }
+
+  async presentAlertMultipleButtons() {
+    const alert = await this.alertController.create({
+      header: 'Alerta',
+      message: '¿Esta seguro que desea comprar este plato?',
+      cssClass: 'alert-style',
+      buttons: [
+        {
+        text: 'Cancel',
+        role: 'cancel',
+        cssClass: 'cancel'
+      },
+      {
+        text: 'Aceptar',
+        role: 'submit',
+        cssClass: 'submit'
+      }
+    ]
+    });
+
+    await alert.present();
+  }
 
 
 }

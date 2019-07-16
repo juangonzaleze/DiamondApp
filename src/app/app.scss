@@ -106,4 +106,53 @@
             }
         }
     }
+
+  
+}
+
+
+button{
+    outline: none;
+}
+
+  // Alert styles
+
+  .alert-wrapper{
+    .alert-head{
+        background-color: var(--primary);
+        text-align: center;
+        color: #fff;
+        padding: 10px;
+        h2{
+            color: #fff;
+        }
+    }
+
+    .alert-message{
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .alert-button-group {
+        justify-content: center;
+        display: flex;
+
+    
+        .cancel{
+            color: var(--gray);
+            width: 50%;
+            margin: 0;
+                span{
+                justify-content: center;
+            }
+        }
+        .submit{
+            color: var(--secondary);
+            width: 50%;
+            margin: 0;
+                span{
+                justify-content: center;
+            }
+        }
+    }
 }
